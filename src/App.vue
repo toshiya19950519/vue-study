@@ -1,11 +1,31 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MainTodo from "@/components/MainTodo.vue";
+import TheFooter from "@/components/TheFooter.vue";
+import TheHeader from "@/components/TheHeader.vue";
+</script>
 
 <template>
   <div class="wrap">
-    <header>ヘッダー</header>
-    <main class="main">メイン</main>
-    <footer>フッター</footer>
+    <TheHeader />
+    <main class="main"><MainTodo /></main>
+    <TheFooter />
   </div>
 </template>
 
-<style></style>
+<style scoped>
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 90vh;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.main {
+  flex: 1;
+  padding: flex;
+}
+</style>
